@@ -1,11 +1,11 @@
-<form action="/tasks" method="patch">
+<% @task = Task.new %>
 
-  <label for="title">Enter task</label>
-  <input type="text" title="task[title]" placeholder="Title">
+<%= form_for @task do |f| %>
+  <%= f.label :title, "Enter task" %>
+  <%= t.text_field :name %>
 
-  <label for="details">Enter details</label>
-  <input type="text" title="task[details]" placeholder="details">
+  <%= f.label :details, "Enter details" %>
+  <%= t.text_field :details %>
 
-  <input type="submit">
-
-</form>
+  <%= f.submit %>
+<%= end  %>
